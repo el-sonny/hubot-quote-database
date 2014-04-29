@@ -1,7 +1,7 @@
 {
   "name": "hubot-quote-database",
   "description": "A Hubot quote database script which adds/removes/purges-all quotes to a quote database and recalls them by regular expression, subtext, or ID",
-  "version": "0.0.9",
+  "version": "1.0.0",
   "author": "John Wyles <john@johnwyles.com>",
   "license": "MIT",
 
