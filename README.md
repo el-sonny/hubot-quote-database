@@ -4,32 +4,38 @@ A Hubot quote database script which adds/removes/purges-all quotes to a quote da
 
 [![Build Status](https://travis-ci.org/johnwyles/hubot-quote-database.png)](https://travis-ci.org/johnwyles/hubot-quote-database)
 
-## Directory Structure
+# Description
 
-Using the common directory structure for hubot script packages it will be easy
-to manage and allow others to easily contribute to your package.
+A script for creating and recalling quotes from the chat using regular expressions and ID numbers
 
-### script
-
-This directory is home to a couple of development scripts; `bootstrap` and `test`
-they're used to bootstrap the development environment and run tests
-respectively.
-
-### src
-
-This directory is home to the actual hubot scripts in the package. Your
-`index.coffee` entry point will load the scripts from this directory.
-
-### test
-
-This directory is home to any tests you write for your scripts. This example
-package uses Mocha, Chai and Sinon to manage writing tests.
-
-## Advantages of Building a Package
-
-Some of the advantages of building an npm package for your hubot script(s) are:
-
-* You don't need to rely on when hubot-scripts package is released.
-* You can specify dependencies in the `package.json` rather than have users
-  manually specify them
-* You can easily add tests using your favourite frameworks and libraries
+# Examples
+    hubot addquote Look at me! I'm on TV
+    hubot addquote johnwyles: I really enjoy the band TV on the radio
+    hubot quote *TV*
+      => Look at me! I'm on TV! [ID: 23]
+      => johnwyles: I really enjoy the band TV on the radio [ID: 24]
+    hubot rmquote 23
+      => Do you really want to purge the quote [ID: 23] from the database?  Type 'rmquote 23 seriously' if you are sure!
+    hubot rmquote 23 seriously
+      => The quote has been removed from the database [ID: 23].
+    hubot quote *TV*
+      => johnwyles: I really enjoy the band TV on the radio [ID: 24]
+    hubot quote
+      => Hello World!  This is a random quote from the database! [ID: 832]
+    hubot quote 832
+      => Hello World!  This is a random quote from the database! [ID: 832]
+    hubot quote (F|f)oobar
+      => Foobar [ID: 56]
+      => foobar [ID: 57]
+      => Foobar is barfoo [ID: 58]
+      => There were [2] more quotes found.  To retrieve all of these run again with quoteall.  For example: 'quoteall (F|f)oobar'.
+    hubot quoteall (F|f)oobar
+      => Foobar [ID: 56]
+      => foobar [ID: 57]
+      => Foobar is barfoo [ID: 58]
+      => I once ate a foobar [ID: 61]
+      => Foobar FTW! [ID: 62]
+    hubot purgeallquotes
+      => Do you really want to purge all of the quotes in the database?  Type 'purgeallquotes seriously' if you are sure!
+    hubot purgeallquotes seriously
+      => All quotes have been purged from the databasee.
