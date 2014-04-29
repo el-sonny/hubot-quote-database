@@ -4,10 +4,6 @@ A Hubot quote database script which adds/removes/purges-all quotes to a quote da
 
 [![Build Status](https://travis-ci.org/johnwyles/hubot-quote-database.png)](https://travis-ci.org/johnwyles/hubot-quote-database)
 
-# Description
-
-A script for creating and recalling quotes from the chat using regular expressions and ID numbers
-
 # Examples
     hubot addquote Look at me! I'm on TV
     hubot addquote johnwyles: I really enjoy the band TV on the radio
