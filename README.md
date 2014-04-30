@@ -1,6 +1,6 @@
-# Hubot Example
 [![Build Status](https://travis-ci.org/johnwyles/hubot-quote-database.png)](https://travis-ci.org/johnwyles/hubot-quote-database)
 
+# Hubot Quote Database
 A Hubot quote database script which adds/removes/purges-all quotes to a quote database and recalls them by regular expression, subtext, or ID
 
 
