@@ -1,8 +1,18 @@
 # Hubot Example
+[![Build Status](https://travis-ci.org/johnwyles/hubot-quote-database.png)](https://travis-ci.org/johnwyles/hubot-quote-database)
 
 A Hubot quote database script which adds/removes/purges-all quotes to a quote database and recalls them by regular expression, subtext, or ID
 
-[![Build Status](https://travis-ci.org/johnwyles/hubot-quote-database.png)](https://travis-ci.org/johnwyles/hubot-quote-database)
+
+# Installation
+Put this line under dependencies in your package.json:
+    "hubot-quote-database": "",
+
+Next open the external-scripts.json file and add:
+    "hubot-quote-database"
+
+Now run NPM install and restart your hubot.
+
 
 # Examples
     hubot addquote Look at me! I'm on TV
